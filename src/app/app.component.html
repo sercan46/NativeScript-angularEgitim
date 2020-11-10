@@ -1,0 +1,58 @@
+<!--
+RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
+Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
+https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
+-->
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+        <StackLayout row="0" class="nt-drawer__header" style="background-color: #252525;">
+            <Image class="nt-drawer__header-image fas t-36" src="~/assets/angular.png" style="width: 650px; height: 550px; border-radius: 15px;"></Image>
+            <Label class="nt-drawer__header-brand" text="Angular Eğitim"></Label>
+        </StackLayout>
+
+        <ScrollView row="1" class="nt-drawer__body">
+            <StackLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
+                    <Label col="0" text="&#xf015;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Anasayfa" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/browse')" (tap)="onNavItemTap('/browse')">
+                    <Label col="0" text="&#xf1ea;" class="nt-icon far"></Label>
+                    <Label col="1" text="Anguların Geçmişi" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/search')" (tap)="onNavItemTap('/search')">
+                    <Label col="0" text="&#xf2bb;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Hakkımda" class="p-r-10"></Label>
+                </GridLayout>
+
+                <StackLayout class="hr"></StackLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" (tap)="mailGonder()">
+                    <Label col="0" text="&#xf658;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Mail Gönder" class="p-r-10"></Label>
+                </GridLayout>
+
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item"  (tap)="takipEt()">
+                    <Label col="0" text="&#xf292;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Takip Et" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item"  (tap)="paylas()">
+                    <Label col="0" text="&#xf1e1;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Paylaş" class="p-r-10"></Label>
+                </GridLayout>
+                <StackLayout class="hr"></StackLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" (tap)="changeMode()">
+                    <Label col="0" text="&#xf042;" class="nt-icon fas"></Label>
+                    <Label col="1" style="font-weight: bold;" text="Light/Dark Mode" class="p-r-10"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
+    <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>

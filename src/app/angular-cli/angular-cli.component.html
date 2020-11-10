@@ -1,0 +1,110 @@
+<ActionBar style="background-color: #252525;">
+  <NavigationButton
+    text="Geri"
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()"
+  >
+  </NavigationButton>
+  <Label text="Angular CLI"></Label>
+</ActionBar>
+
+<StackLayout>
+  <Image src="~/assets/cli.png"></Image>
+</StackLayout>
+
+<ScrollView>
+  <GridLayout columns="*" rows="*" style="margin-top: 150vh;">
+    <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" height="100%">
+        <Image src="~/assets/clikurulum.png"></Image>
+
+        <Label
+        style="font-weight: bold;"
+        text="npm i -g typescript  "
+        textWrap="true"
+        class="m-b-10"
+      ></Label>
+      <Label
+        textWrap="true"
+        text="NodeJS üzerinden TypeScript’i kurar. “g” parametresi projeye özel değil global kurulumu yapar."
+        class="m-b-10"
+      ></Label>
+
+      <Label
+      style="font-weight: bold;"
+      text="npm install -g @angular/cli "
+      textWrap="true"
+      class="m-b-10"
+    ></Label>
+    <Label
+      textWrap="true"
+      text="NodeJS üzerinden Angular’i kurar. (“install” parametresi ile “i” parametresi aynı işlemi yapar.) “g” parametresi projeye özel değil global kurulumu yapar."
+      class="m-b-10"
+    ></Label>
+
+
+    <Label
+    style="font-weight: bold;"
+    text="npm unistall -g angular/cli
+npm cache clean
+npm install -g @angular/cli@lastest "
+    textWrap="true"
+    class="m-b-10"
+  ></Label>
+  <Label
+    textWrap="true"
+    text="Güncel sürümü tekrar kurmak için mevcut Angular Sürümü kaldırıp cache’i temizledikten sonra tekrar kurabilirsiniz."
+    class="m-b-10"
+  ></Label>
+
+        <Label
+          style="font-weight: bold;"
+          text="ng new"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="Yeni proje oluşturmak için kullanılan komuttur ng new PROJE_ADI şeklinde kullanılmaktadır."
+          class="m-b-10"
+        ></Label>
+
+        <Label
+          style="font-weight: bold;"
+          text="ng generate"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="Yeni bir component servis routes ve pipes tanımlanırken kullanılır. Kısaca generate yerine (g) kullanılabilir. Örneğin ng g component COMPONENT_ADI"
+          class="m-b-10"
+        ></Label>
+
+        <Label
+          style="font-weight: bold;"
+          text="ng serve"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          text="Bilgisayarımızda localhostta projemizi çalıştırmamızı sağlar. Örneğin ng serve denililrse proje çalışır ama otomatik olarak açmaz eğer ng serve --open dersek uygun bir portta default internet tarayıcısında kendisini başlatacaktır. Eğer port adresini değiştirmek istersenizde ng serve --port PORT_ADRESİ şeklinde çalıştırabilirsiniz."
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+
+        <Label
+          style="font-weight: bold;"
+          text="ng build --prod"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          text="Uygulamayı yayınlama öncesi derleyip hazırlar. Gerekli optimizasyonları yapar. Derlenen dosyaları DIST klasörü içerisine toplar. –prod parametresi, uygulamayı prodüksiyon için özel hazırlar."
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+      </StackLayout>
+    </Card:CardView>
+  </GridLayout>
+</ScrollView>

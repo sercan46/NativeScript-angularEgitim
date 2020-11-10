@@ -1,0 +1,88 @@
+<ActionBar style="background-color: #252525;">
+  <NavigationButton
+    text="Geri"
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()"
+  >
+  </NavigationButton>
+  <Label text="Polymer 3"></Label>
+</ActionBar>
+
+<StackLayout>
+  <Image src="~/assets/polymer.png"></Image>
+</StackLayout>
+
+<ScrollView>
+  <GridLayout columns="*" rows="*" style="margin-top: 250vh;">
+    <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" height="100%">
+        <Label
+          textWrap="true"
+          text="Polymer bize kendi özel componentlerimizi sıfırdan oluşturmak için HTML, CSS ve JavaScript’in bir kullanır.Polimer, UI için google material design sağlar, böylece bu hibrid mobil uygulama yapımında kullanılabilir. Hibrit uygulamanın UI görünümü sağlar."
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          style="font-weight: bold;"
+          text="Neden Polymer.js Kullanmalıyım? "
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="Polymer.js, öğeye etkileşimler eklemek için HTML, CSS ve JavaScript kullanarak kendi özel öğelerinizi kolayca oluşturmanızı sağlar. "
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="Polymer.js, Google tarafından oluşturulur ve web componentleri ile birlikte tarayıcılar arası uyumlu uygulamalar sağlar. "
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="Polymer.js, web uygulamalarına yönetmek için Polimer komut satırı arabirimi sağlar."
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          style="font-weight: bold;"
+          text="Polymer.js’nin özellikleri"
+          class="m-b-10"
+        ></Label>
+        <Label
+        textWrap="true"
+        text="Polymer.js, kütüphanesi web standartları API’sinin üzerine kurulu olduğundan özel HTML öğeleri oluşturmanın en basit yolunu sunar."
+        class="m-b-10"
+      ></Label>
+      <Label
+      textWrap="true"
+      text="Polymer.js, karma mobil uygulamalar geliştirmek için Google material design kullanır. Bu nedenle, mobil uygulamalar geliştirmek hızlı ve kolaydır."
+      class="m-b-10"
+    ></Label>
+    <Label
+    textWrap="true"
+    text="Yeniden kullanılabilir widget’lar oluşturmanızı kolaylaştırır."
+    class="m-b-10"
+  ></Label>
+  <Label
+  textWrap="true"
+  text="Polymer.js’nin özel öğeleri ağ genelinde dağıtılır ve kullanıcıların bu öğeleri HTML İçe Aktarmalarının yardımıyla kullanmalarını kolaylaştırır."
+  class="m-b-10"
+></Label>
+<Label
+textWrap="true"
+style="font-weight: bold;"
+text="Polymer.js’nin avantajları"
+class="m-b-10"
+></Label>
+<Label
+textWrap="true"
+text="- Polymer.js tarayıcılar arası uyumluluğu destekler.
+- Hızlı ve kolay hibrit mobil uygulama geliştirme.
+- Tek yönlü ve iki yönlü veri bağlamayı destekler.
+- Karmaşık projeleri yönetmek için polimer komut satırı arayüzü sağlar."
+class="m-b-10"
+></Label>
+      </StackLayout>
+    </Card:CardView>
+  </GridLayout>
+</ScrollView>

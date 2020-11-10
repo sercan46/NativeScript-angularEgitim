@@ -1,0 +1,58 @@
+<ActionBar style="background-color: #252525;">
+    <NavigationButton
+      text="Geri"
+      android.systemIcon="ic_menu_back"
+      (tap)="goBack()"
+    >
+    </NavigationButton>
+    <Label text="Module Yapısı"></Label>
+  </ActionBar>
+
+  <StackLayout>
+    <Image src="~/assets/module.png"></Image>
+  </StackLayout>
+
+  <ScrollView>
+    <GridLayout columns="*" rows="*" style="margin-top: 150vh;">
+      <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+        <StackLayout class="cardContent" shadow="5" height="100%">
+          <Label
+      textWrap="true"
+      text="Bir Angular Uygulamasını modüller koleksiyonu olarak ifade edebiliriz ve Angular’ın bünyesinde modüller için NgModules diye adlandırdığımız bir sistem mevcut. Her Angular Uygulaması en azından bir tane uygulamayı ilk çalıştıran Root modülünü barındırır. Root modülü genel olarak AppModule diye adlandırılır. NgModule aslında @NgModule şeklinde ifade edilen bir sınıftır. Ayrıca @NgModule metodunu(decorator) parametre olarak tek bir obje olan bir constructor’a benzetebiliriz ve içeriğindeki elemanlar modülü tanımlarlar."
+      class="m-b-10"
+    ></Label>
+    <Label
+    textWrap="true"
+    style="font-weight: bold;"
+    text="Bunların en önemlileri; "
+    class="m-b-10"
+  ></Label>
+  <Label
+  textWrap="true"
+  text="declarations : Detayını ilerleyen bölümlerde öğreneceğiz. Ancak kısaca ifade etmek gerekirse view classlarıdırlar."
+  class="m-b-10"
+></Label>
+<Label
+textWrap="true"
+text="exports : Declarations’ın aslında bir alt kümesidir. Modül içerisinde kullanılacak olan (yada başka bir deyişle görülebilir olması) Component Class‘larının tanımlandığı yerdir."
+class="m-b-10"
+></Label>
+<Label
+textWrap="true"
+text="imports : Başka bir modüle ait olan view class’larının mevcut modül içinde kullanılmak istenildiğinde kullanılan elemandır."
+class="m-b-10"
+></Label>
+<Label
+textWrap="true"
+text="providers : Injectable Service Class‘larını uygulama içerisinde global olarak erişim sağlayan alandır."
+class="m-b-10"
+></Label>
+<Label
+textWrap="true"
+text="bootstrap : Sadece root module tarafından set edilmesi gereken bir elemandır, uygulama içerisindeki bütün child view ları yöneten root component‘ın tanımlandığı yerdir."
+class="m-b-10"
+></Label>
+        </StackLayout>
+      </Card:CardView>
+    </GridLayout>
+  </ScrollView>

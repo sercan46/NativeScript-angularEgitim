@@ -1,0 +1,51 @@
+<ActionBar style="background-color: #252525;">
+    <NavigationButton
+    text="Geri"
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()"
+  >
+  </NavigationButton>
+    <Label text="NgRx"></Label>
+  </ActionBar>
+
+  <StackLayout>
+    <Image src="~/assets/ngrx.jpg"></Image>
+  </StackLayout>
+
+  <ScrollView>
+    <GridLayout columns="*" rows="*" style="margin-top: 180vh;">
+      <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+        <StackLayout class="cardContent" shadow="5" height="100%">
+          <Label
+            style="font-weight: bold;"
+            text="NgRx Nedir ?"
+            class="m-b-10"
+          ></Label>
+          <Label
+            text="Yukarıda gördüğünüz üzere, “NgRx, popüler state management pattern’i olan Redux’ın, Angular konsept ve tekniklerine uyarlanmış hali, uygulamasıdır” diyebiliriz. Bu kütüphaneyi daha iyi anlamak için, Redux Pattern’ini biraz incelememiz gerekir. Gelin öncelikle Redux’daki akışı inceleyelim."
+            textWrap="true"
+            class="m-b-10"
+          ></Label>
+
+          <Label
+          style="font-weight: bold;"
+          text="Redux Pattern"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label textWrap="true" text="Redux Pattern / Modeli, uygulama boyunca tek yönlü bir veri akışı sağlayarak uygulama state’imizi yönetmemize yardımcı olur." class="m-b-10"></Label>
+
+        <Label
+        style="font-weight: bold;"
+        text="Neden NgRx Kullanmalıyız ?"
+        textWrap="true"
+        class="m-b-10"
+      ></Label>
+          <Label textWrap="true" text="Aslında mantığına giriş yaptığımız bu yapıyı neden kullanmanız gerektiğini çoktan anladığınızı düşünüyorum. Benim ilk aklıma gelenler ise şu şekilde;
+    - Client-Side caching’i bize sağlayan state sayesinde, sürekli servis çağrısı yapmak zorunda kalmamak için,
+    - Reducer’lar Store’u günceller, Store’a göre oluşturulmuş Selector’lar ve bu Selector’lara subscribe olmuş tüm Componentlerin güncelleniyor olması için,
+    - Kısacası, söz konusu uygulamanın akış şemasını, kullanım örneklerini çıkardığımda, kullanıcının uygulamamda kaldığı süre boyunca bir State’e ihtiyacım olduğu anladığım zaman NgRx kullanımı doğru olacaktır." class="m-b-10"></Label>
+      </StackLayout>
+      </Card:CardView>
+    </GridLayout>
+  </ScrollView>

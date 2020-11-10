@@ -1,0 +1,68 @@
+<ActionBar style="background-color: #252525;">
+  <NavigationButton
+    ios:visibility="collapsed"
+    icon="res://menu"
+    (tap)="onDrawerButtonTap()"
+  ></NavigationButton>
+
+  <ActionItem
+    icon="res://menu"
+    android:visibility="collapsed"
+    (tap)="onDrawerButtonTap()"
+    ios.position="left"
+  >
+  </ActionItem>
+  <Label text="Anasayfa"></Label>
+</ActionBar>
+<StackLayout>
+  <Image src="~/assets/angularjs.png"></Image>
+</StackLayout>
+
+<ScrollView>
+  <GridLayout
+    columns="*, *"
+    rows="30,200, 200"
+    style="margin-top: 240vh;"
+  >
+    <Label
+      row="0"
+      col="0"
+      style="
+        padding-left: 12vh;
+        font-weight: bold;
+        font-size: 18px;
+        color: red;
+      "
+      text="Angular Bileşenleri"
+    ></Label>
+
+    <Card:CardView stretch="none" row="1" col="0" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" (tap)="angularShow()">
+        <Image width="100%" height="65%" src="~/assets/angular.png"></Image>
+        <Label text="Angular" class="m-b-10"></Label>
+      </StackLayout>
+    </Card:CardView>
+    <Card:CardView stretch="none" row="1" col="1" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" (tap)="nativeAc()">
+        <Image
+          width="100%"
+          height="65%"
+          src="~/assets/nativescript.jpg"
+        ></Image>
+        <Label text="NativeScript" class="m-b-10"></Label>
+      </StackLayout>
+    </Card:CardView>
+    <Card:CardView stretch="none" row="2" col="0" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" (tap)="ngrxAc()">
+        <Image width="100%" height="65%" src="~/assets/ngrx.png"></Image>
+        <Label text="NgRx" class="m-b-10"></Label>
+      </StackLayout>
+    </Card:CardView>
+    <Card:CardView stretch="none" row="2" col="1" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" (tap)="polymerAc()">
+        <Image width="100%" height="65%" src="~/assets/polymer.png"></Image>
+        <Label text="Polymer" class="m-b-10"></Label>
+      </StackLayout>
+    </Card:CardView>
+  </GridLayout>
+</ScrollView>

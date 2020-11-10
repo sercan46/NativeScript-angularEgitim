@@ -1,0 +1,33 @@
+<ActionBar style="background-color: #252525;">
+    <NavigationButton
+      ios:visibility="collapsed"
+      icon="res://menu"
+      (tap)="onDrawerButtonTap()"
+    ></NavigationButton>
+
+    <ActionItem
+      icon="res://menu"
+      android:visibility="collapsed"
+      (tap)="onDrawerButtonTap()"
+      ios.position="left"
+    >
+    </ActionItem>
+    <Label text="Angular Tarihçe"></Label>
+  </ActionBar>
+
+<StackLayout>
+    <Image src="~/assets/tarih.jpg"></Image>
+</StackLayout>
+
+  <ScrollView>
+
+  <GridLayout columns="*" rows="*" style="margin-top:180vh">
+    <Card:CardView  stretch="none" row="0" col="0" class="cardStyle" >
+         <StackLayout class="cardContent" shadow="5" height="100%">
+            <Label style="text-align: center; font-weight: bold;" text="Angular Tarihi" class="m-b-10"></Label>
+            <Label textWrap="true" text="Angular topluluğun çoğunu 2010'da ilk yayınlandığında fırtınaya maruz bıraktı. O zamanlar büyük web uygulamaları geliştirmeye geldiğinde dojo, omurga ve nakavt gibi kütüphaneler büyüktü. 2016'ya hızlı bir şekilde ilerlediğinizde Google'daki çekirdek ekip, halefi AngularJS… Angular2'ye teslim etti. Veya, “Sadece Açısal”. Çok heyecan ve eleştiri geldi. 2012'den beri Açısal uygulamalar yazarak dişlerini kesen bir geliştirici olarak, bu çerçeveyi gördüm ve çevresindeki topluluk bugünkü haline geldi. 2010: Açısal JS'nin doğuşu Yayınlanmadan önce Miško Hevery adında bir Google çalışanı bir yan proje geliştiriyordu. Bu yan proje, üzerinde çalıştığı birkaç dahili proje için web uygulamaları oluşturmayı kolaylaştırmaktı. Bu yan proje daha sonra AngularJS (HTML'deki <> nedeniyle Angular) olarak anıldı. Misko ve birkaçı AngularJS ile birkaç dahili uygulama geliştirmeye başladı ve sonunda 2010'da açık kaynaklı bir proje olarak yayınladı. Topluluk ellerini ele geçirdi ve inanılmaz uygulamalar geliştirmeye başladı. Ionic'ten (eski adıyla DriftyCo) Apache Cordova'nın üzerine inşa edilen İyonik Çerçeve, geliştiricilerin mobil uygulamalarına da güç sağlamak için AngularJS'yi kullanmalarına izin veren gerçekten ateş yaktı. En büyük markalardan bazıları, hem web hem de mobil uygulama geliştirme için araç setine dahil etmeye başladı. 2014-2015: Büyük Yeniden Yazma İlk çıkışından birkaç yıl sonra, web geliştirme ortamı değişmeye başladı ve AngularJS bir duvara çarptı. JavaScript'te yeni gelişmeler ve standartlar ortaya çıktı ve Angular kanayan kenarın gerisinde kalmaya başladı. Daha da önemlisi, çekirdek ekip artan talepler çerçevesinde iyileştirmek için yapabilecekleri bir sınıra ulaşmıştı. Google ve topluluktaki ekip, bir zamanlar küçük bir iç projeyi aldı ve mobil ve büyük kurumsal uygulamalar gibi yeni sınırlara itti. Bununla birlikte, Miško'nun ilk yarattığı bu durumlar için asla tasarlanmamış veya tasarlanmamıştır. Her çekme talebi ile AngularJS'yi ihtiyaçlarımıza en uygun şekilde değiştirdik. Google'daki çekirdek ekip 2.0 sunmaya çalıştığında, önceki AngularJS tasarımlarına zincirlenmek istemediler. Büyük ve platformlar arası uygulamalar geliştirirken zor sorunları çözmek için sıfırdan bir çerçeve oluşturmak istediler. Bu tam bir yeniden yazma demekti. Birçoğunun öğrenmek için büyüdüğü çerçeve ve aşk borulara iniyordu. Açısal Malzeme (v1.x) ve Bootstrap gibi oluşturulan tüm büyük üçüncü taraf projeleri sonunda kullanımdan kaldırılacaktı. Gerçek: Açısal ve Açısal JS AngularJS 1.x her zaman 1'i sürümde tuttu. Bu bir değişiklik olsun ya da olmasın, ana sürüm her zaman 1.x.x Angular 2.0 ile ekip o zamandan beri (Major) (Minor) (Patch) 'in semantik versiyonlama uygulamasını takip etmeye karar verdi. Yeni bir sürüme herhangi bir kırılma değişikliği eklenirse, ana sürümü şişirir. İlk sürümden bu yana yaklaşık 3 kırılma değişikliği oldu (FYI: birkaç açısal paketi hizalamak için 3 → 2'den sürüm 3'ü atladık) 2016: Panik Dönemi Geliştiriciler ve yöneticiler de korkmaya başladı. Tam yeniden yazma, üretimde çalışan mevcut AngularJS projeleri için kıyamet günü senaryosu anlamına geliyordu. “Bu uygulamayı 3, 5 veya 6 yıl sonra nasıl destekleyebiliriz ?!” Daha da kötüsü, AngularJS 1.X uygulamasını yeni Angular 2.0'a taşımak için açık bir göç stratejisi değildi. Takımlar silahı atladı ve hala beta aşamasındayken yeni Angular2.0 uygulamaları geliştirmeye başladı. Düşünce şuydu: “Eğer bu tam bir yeniden yazma olacaksa gitsem iyi olur”. Buldukları şey, her sürümde çok sinir bozucu yeni kavramlar ve değişiklikleri kırmaktı. İşte tam bu noktada ekipler React gibi kütüphaneler için AngularJS'ye hızla dönmeye başladılar. Geliştiriciler bir zamanlar sevdikleri JavaScript projelerine ayrılık mektupları yazdı. Büyüyen ağrıları Geçiş yapan çok sayıda takımı suçlamıyorum. Anlaşılabilir olması için yarın değil, bugün güvenilir bir çerçeveye ihtiyaçları vardı. Bununla birlikte, beta sürümleriyle sınırlı zaman geçirdikten sonra orada yüzen bazı tuzlu görüşler olduğunu düşünüyorum. Beta yazılımı değişiklikleri bozmaya eğilimlidir. Tamamen etmeyen yazılımı. İlk aşamalarda yeni bir Açısal proje bile oluşturmak oldukça zordu. Derleme boyutları oldukça büyüktü, sözdizimi çok yabancıydı ve geliştiricilere çok büyük miktarda TypeScript gibi yeni kavramlar atıldı. Takımlar Angular'ı araştırıyor ve bu ayrılık mektuplarını görüyor ve başka bir yöne yönelmekten korkuyorlar. Ne yazık ki, projeyi kendileri değerlendirmek ve ekibin son zamanlarda kaydettiği tüm ilerlemeyi görmek için zaman almıyorlar. 2017-2018: Moloz taşından çıkan Hızlı bir şekilde 2018'e dönün ve Açısal çerçeve, çerçevelerini stabilize etme çabalarında birkaç önemli yayına ulaştı. Her sürüm daha iyi yapı boyutları, kararlı API'ler ve genel olarak daha iyi performans sağlar. Ödenmesi ağır bir bedeldi, ancak ekip sonunda Angular'ı 1.x'te hiç olmadığı kadar fazla vermek için sıfırdan yeniden tasarladı. React gibi kitaplıklardan farklı olarak Angular, büyük bir uygulama oluşturmanın her köşesinde gerçekten çözümler sunar. React gibi kütüphaneler hala projemizdeki eksik parçaları doldurmak için dış projeler gerektirmektedir. Her ikisinin de artıları ve eksileri vardır, ancak bu başka bir zaman için başka bir konudur."></Label>
+         </StackLayout>
+    </Card:CardView>
+    </GridLayout>
+  </ScrollView>
+

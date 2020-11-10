@@ -1,0 +1,31 @@
+<ActionBar style="background-color: #252525;">
+    <NavigationButton
+      ios:visibility="collapsed"
+      icon="res://menu"
+      (tap)="onDrawerButtonTap()"
+    ></NavigationButton>
+
+    <ActionItem
+      icon="res://menu"
+      android:visibility="collapsed"
+      (tap)="onDrawerButtonTap()"
+      ios.position="left"
+    >
+    </ActionItem>
+    <Label text="Ben Kimim"></Label>
+  </ActionBar>
+
+  <ScrollView>
+
+  <GridLayout columns="*" rows="*" style="margin-top: 50vh;">
+    <Card:CardView  stretch="none" row="0" col="0" class="cardStyle" >
+         <StackLayout class="cardContent" shadow="5" height="100%">
+            <Image src="~/assets/funny.jpg"></Image>
+
+            <Label style="text-align: center; font-weight: bold; color:darkred" text="Sercan Özbek" class="m-b-10"></Label>
+            <Label textWrap="true" text="Ben Sercan Özbek. 22 yaşındayım, Kahramanmaraş/Elbistanlıyım. 2019 yılında Düzce Üniversitesi Bilgisayar Mühendisliği bölmünden mezun oldum. Ayrıca ikinci üniversite olarak Eskişehir Anadolu Üniversitesi Açık Öğretim Fakültesi İşletme bölmünü okumaktayım. İş yeri eğitimim için İzmir'de bulunan Europrotel Hotel Software şirketi ile anlaştım. İzmir'de otel yazılımı yapan Europrotel Hotel Software şirketinde 4 ay işyeri eğitimimi tamamladıktan sonra 2 ayda aynı şirkette part time olarak çalıştım. Okulumunda bitmesi ile İzmir'de iş aramaya başladım.İzmir'de bulunan İlker Teknik Metal isimli yazılım şirketinde çalışmaya başladım. Bu şirkette 6 ay çalıştıktan sonra Antalya'da Akdeniz Üniversitesi Teknokentinde bulunan Talya Bilişim şirketinin Medisoft kısmında çalışmaya başladım. Şuan da aynı şirkette Hastane Otomasyon sistemi üzerine çalışmaktayım. En büyük hobilerimden bir tanesi gezmektir. Şuana kadar İstanbul, Balıkesir, İzmir,Antalya, Düzce, Eskişehir, Ankara, Kahramanmaraş, Gaziantep ve bir çok şehri gezdim. Sinemaya gidip film izlemekte hobilerim arasında. Hafta en az bir günümü sinema salonuna gitmek için ayırmaktayım. Bunların dışında vücut geliştirme sporuyla uğraşmaktayım."></Label>
+         </StackLayout>
+    </Card:CardView>
+    </GridLayout>
+  </ScrollView>
+

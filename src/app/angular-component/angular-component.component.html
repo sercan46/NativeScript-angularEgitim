@@ -1,0 +1,38 @@
+<ActionBar style="background-color: #252525;">
+    <NavigationButton
+      text="Geri"
+      android.systemIcon="ic_menu_back"
+      (tap)="goBack()"
+    >
+    </NavigationButton>
+    <Label text="Component"></Label>
+  </ActionBar>
+
+  <StackLayout>
+    <Image src="~/assets/component.png"></Image>
+  </StackLayout>
+
+  <ScrollView>
+    <GridLayout columns="*" rows="*" style="margin-top: 150vh;">
+      <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+        <StackLayout class="cardContent" shadow="5" height="100%">
+        <Label
+          textWrap="true"
+          text="Angular’de bileşenler (Components), ek meta verisi kullanabilmenize olanak sağlar. Angular’de bileşenler (Components), her şey olabilir. Bileşen bir button olabilir, bir liste olabilir, bir gönürüm düzeni olabilir. Kısacası, anlam yükleyeceğiniz her şey bir bileşen olarak düzenlenebilir. Bileşen belli bacaklaran meydana gelir.  Birinci bacağı, Typescript dosyası. TS uzantılı olur.  Bu dosya içerisinde seçici (selector) için özel bir etkilet tanımlanır. Bu etiketin kendine ait bir HTML dosyası vardır. Bu da bileşenin ikinci ayağıdır. İkinci ayağında olan bu dosyanın tanımını temlateURL parametresi ile tanımlanır. İlla ayrı dosya olmak zorunda değildir. Dahili HTML yazılabilir. Eğer böyle yapılacaksa direk template parametresi kullanılabilir. Bu HTML dosyasını stillendiren bir CSS dosyası vardır. CSS dosyası, bileşenin üçüncü ayağını meydana getirir. Son ayağı ise modül (Module) dosyasıdır. Veri ile ilgili tanımları bu dosyada barındırmaktadır. Bileşenler Angular uygulamasının en temel arayüz yapı taşıdır. Angular’de hiyerarşik düzende, Angular Application’dan sonra Compoents gelir. Bileşenler aynı zamanda Directive’lerin bir alt kümesidir. Angular CLI üzerinden yeni bir bileşen eklemek için yazmanız gereken komut;"
+          class="m-b-10"
+        ></Label>
+        <Label
+        style="font-weight: bold;"
+        text="ng generate component COMPONENT_ADI "
+        textWrap="true"
+        class="m-b-10"
+      ></Label>
+      <Label
+      textWrap="true"
+      text="Buradaki “generate” parametresi yerine “g”, “component” parametresi yerine de “c” kullanılabilir. Eğer spec dosyasının oluşturulmamasını isteniyorsa komutun sonuna, “–spec false” parametresi ve değeri eklenebilir. Yani son haliyle aşağıdaki gibi bir sıralama kullanılabilir."
+      class="m-b-10"
+    ></Label>
+        </StackLayout>
+      </Card:CardView>
+    </GridLayout>
+  </ScrollView>

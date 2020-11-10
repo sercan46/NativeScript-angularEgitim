@@ -1,0 +1,79 @@
+<ActionBar style="background-color: #252525;">
+  <NavigationButton
+  text="Geri"
+  android.systemIcon="ic_menu_back"
+  (tap)="goBack()"
+>
+</NavigationButton>
+  <Label text="Neden Angular"></Label>
+</ActionBar>
+
+<StackLayout>
+  <Image src="~/assets/neden.png"></Image>
+</StackLayout>
+
+<ScrollView>
+  <GridLayout columns="*" rows="*" style="margin-top: 140vh;">
+    <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" height="100%">
+        <Label
+          style="text-align: center; font-weight: bold;"
+          text="Angular Kullanmak İçin Bir Kaç Sebep"
+          class="m-b-10"
+        ></Label>
+        <Label
+          style="font-weight: bold;"
+          text="Birinci Neden – Angular’ın SPA (Single Page Application) desteği"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label
+          text="Single Page Application (SPA) desteği sağlamaktadır. Single Page Application routing mantığının back end tarafından değilde Javascript aracılığıyla Client Side tarafında gerçekleştirmesini sağlar. Aslında burada tek bir index sayfası oluyor ve kullanıcının çağırdığı routing ile istediği sayfanının componenti yükleniyor. Yani burada istemci kişilerin kullandığı web tarayıcısı oluyor. Bunun'da en büyük avantajı back end tarafında sistemi meşgul etmeyip daha hızlı şekilde web sitelerde gezinme imkanı sağlamaktadır."
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+
+
+        <Label
+        style="font-weight: bold;"
+        text="İkinci Neden - Two-way data binding (Çift yönlü Data İletişimi)"
+        textWrap="true"
+        class="m-b-10"
+      ></Label>
+      <Label textWrap="true" text="Angular 2 ve üzeri sürümlerinde ngModel Directive’lerini kullanarak otomatik olarak View ve Controller katmanları arasında veri bağlantısını sağlarız. Bu sayede aynı değişken üzerindeki herhangi bir değişiklik Angular two-way data binding sayesinde bütün sayfa üzerindeki ilgili alanların değişmesini tetikler. DOM da yapılan bir değişiklik component  kısmında rahatça yakalanabilmektedir." class="m-b-10"></Label>
+
+      <Label
+      style="font-weight: bold;"
+      text="Üçüncü Neden – Modular Architecture"
+      textWrap="true"
+      class="m-b-10"
+    ></Label>
+        <Label textWrap="true" text="Angular’ın moduler yapısı sayesinde uygulamamızı parçalara bölebilir ve tekrar kullanımını sağlayabiliyoruz. Bu module’leri component’ler, directive’ler, pipe’lar ve service’ler ile birlikte gruplayabiliyoruz. Ayrıca module’lerin bir başka avantajıda layz-loading yapısıdır. Bu sayede bir ve ya birden çok özelliği gruplayıp gerektiğinde yükleyebileceğimiz için düzgün kullanıldığı durumda uygulama performansını ciddi oranda arttıracaktır. Kurumsal uygulamalar çok büyüyebilir. Ekipler arasında iş paylaşımı yapmak zorlaşır. Module’ler sayesinde ekiplere işleri module by module paylaştırabiliriz. Kod tutarlılığını koruyarak düzenli kod yazmanın önünüde açmış oluruz." class="m-b-10"></Label>
+
+        <Label
+        style="font-weight: bold;"
+        text="Dördüncü Neden – Az Kodlama ile Çok İş"
+        textWrap="true"
+        class="m-b-10"
+      ></Label>
+      <Label
+      text="Developer’lar kısa fakat etkili kodlar yazmak isterler. Angular MVC (Model View Controller) mimarisini destekler, hatta geliştiriciyi bu yapıya uygun şekilde kod yazmaya zorlar. Component ve Module’ler sayesinde tekrar tekrar aynı işi yapan kodlar yazmak yerine yeniden kullanımı sağlar. Ayrıca, Angular Directive’leri sayesinde HTML’ inizi geliştirebilmenize ve kendi custom html tag’larınızı oluşturmanıza izin veriyor.  “ngIf”, “ngFor” gibi directive’ler sayesinde kısa kodlarla html render yönetimini kolaylıkla yapabiliyorsunuz."
+      textWrap="true"
+      class="m-b-10"
+      ></Label>
+
+      <Label
+      style="font-weight: bold;"
+      text="Beşinci Neden – Lazy Loading"
+      textWrap="true"
+      class="m-b-10"
+    ></Label>
+    <Label
+    text="Lazy loading ile kullanıcıya çağırdığı sayfa yüklenir. O sayfa çağrılmadığı sürece tarayıcısına yüklenmez. Örneğin hastane yazılımı yapıyorsunuz ve angular kullanıyorsunuz. Hasta kaydı alan sekreterin doktorun görmesi gereken Ameliyat listesini görmesi gerekmez. Eğer kullanıcı o module tıklamadığı sürece tarayıcısına inmeyecektir. Böylece yüksek boyutlu projelerde de hızlı çalışma olanağı sağlamaktadır."
+    textWrap="true"
+    class="m-b-10"
+    ></Label>
+    </StackLayout>
+    </Card:CardView>
+  </GridLayout>
+</ScrollView>

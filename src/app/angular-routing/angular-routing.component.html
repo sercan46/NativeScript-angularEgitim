@@ -1,0 +1,91 @@
+<ActionBar style="background-color: #252525;">
+  <NavigationButton
+    text="Geri"
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()"
+  >
+  </NavigationButton>
+  <Label text="Routing Yapısı"></Label>
+</ActionBar>
+
+<StackLayout>
+  <Image src="~/assets/routing.png"></Image>
+</StackLayout>
+
+<ScrollView>
+  <GridLayout columns="*" rows="*" style="margin-top: 150vh;">
+    <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+      <StackLayout class="cardContent" shadow="5" height="100%">
+        <Label
+          textWrap="true"
+          text="Routing işlemi, uygulamanız içerisinde tek sayfa üzerinde farklı sayfaları ve dinamik olarak bölüm güncellemelerine olanak sağlar. Diğer bir özelliği ise projede dağıtık bir mimari oluşturmayı sağlıyarak, yönetilebilirliği ve erişim kolaylığı sağlamasıdır. En basit haliyle anlatmak istersem, uygulamayı çeşitli sayfalara ayırarak, herbirini farklı controllerlara bağlamak için kullanılır. Angular’da Routing kullanımı için app.module.ts dosyasında öncelikle Router Modül’ünü eklemeniz ve kullanacağınızı belirtmeniz gerekmektedir. Bunun için app.module.ts dosyasında"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          style="font-weight: bold;"
+          text="import { RouterModule } from '@angular/router'"
+          class="m-b-10"
+        ></Label>
+        <Image src="~/assets/routornek.jpg"></Image>
+        <Label
+          textWrap="true"
+          text="ÖNEMLİ NOT:  Projeniz eğer çok büyük çaplı ise, tüm routing işlemlerinizi ayrı bir modülde toparlayıp buraya yine ekleyebilirsiniz. Tek sayfa içerisinde sayfa yenilemek için öncelikle diğer sayfaların component’lerini oluşturunuz. (Component’ler hakkında detaylı bilgiyi buradan erişebilirsiniz.) Daha sonra bu component’leri aşağıdaki gibi bir değişken üzerinden sayfaya tanımlayınız."
+          class="m-b-10"
+        ></Label>
+        <Image src="~/assets/routeornek2.jpg"></Image>
+        <Label
+          textWrap="true"
+          text="Kullanacağınız routing değişkenlerini import ettiğiniz RouterModule modülü üzerinden root tanımı ile işlemi tamamlayınız. Eğer routing üzerinden component’e bir değişken aktarmak istiyorsanız örnek path olarak  “detail/:id” tanımlayabilir ve id değişkenini ilgili component’e gönderebilirsiniz. Birden fazla değişken aktarmak için ise benzer şekilde değişkenleri çoğaltabilirsiniz; “detail/:id/:title”"
+          class="m-b-10"
+        ></Label>
+        <Image src="~/assets/routeornek3.jpg"></Image>
+        <Label
+          textWrap="true"
+          text="HTML tarafında ise yapmanız gereken tek şey ana uygulamamızın HTML’ini barındıran app.component.html dosyasında uygun bir yerine"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          style="font-weight: bold;"
+          text="<router-outlet></router-outlet>"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="etiket bloğunu eklemeniz olacaktır. Böylece hemen bu etiketin altına değişkende tanımladığınız component’ler görüntülenebilir. İstediğiniz component’e link verebilmek için <a> etiketinde href özelliği yerine routerlink kullanmanız yeterli olacaktır."
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          style="font-weight: bold;"
+          text="Routing tanımlı bağlantılara (link’lere) aktif class (current class) tanımı nasıl yapılır?"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="Bu işlem için sadece yine <a> etiketine routerLinkActive özelliği eklemeniz yeterli olacaktır. Bu özelliğe değer olarakta aktif link’i göstermek için tanımladığınız class’ın adını yazmanız gerekmektedir. Örnek kullanımı aşağıda görebilirsiniz."
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          style="font-weight: bold;"
+          text="<a routerLink='/login' routerLinkActive='active'>Login</a>"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          style="font-weight: bold;"
+          text="Tanımlı olmayan bir url’i yakalamak için nasıl bir rotuing yapılabilir?"
+          class="m-b-10"
+        ></Label>
+        <Label
+          textWrap="true"
+          text="Bulunamayan sayfa veya 404 hatası olarak bilinen bu işlem için yine root olarak tanımladığınız değişkenlerde bir tane path olarak “**” ekleyip yönlenmesini istediğiniz bileşeni yazmanız gerekmektedir."
+          class="m-b-10"
+        ></Label>
+        <Image src="~/assets/routeornek4.jpg"></Image>
+      </StackLayout>
+    </Card:CardView>
+  </GridLayout>
+</ScrollView>

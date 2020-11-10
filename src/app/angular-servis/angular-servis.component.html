@@ -1,0 +1,27 @@
+<ActionBar style="background-color: #252525;">
+    <NavigationButton
+      text="Geri"
+      android.systemIcon="ic_menu_back"
+      (tap)="goBack()"
+    >
+    </NavigationButton>
+    <Label text="Angular Service"></Label>
+  </ActionBar>
+
+  <StackLayout>
+    <Image src="~/assets/service.png"></Image>
+  </StackLayout>
+
+  <ScrollView>
+    <GridLayout columns="*" rows="*" style="margin-top: 150vh;">
+      <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+        <StackLayout class="cardContent" shadow="5" height="100%">
+        <Label
+          textWrap="true"
+          text="Service: Servisler bize bileşenler arasında veri akışı sağlar. Aslında biz component oluşturduğumuzda gelen .ts içerisinde kodumuzu yazabiliriz, fakat burada her component için benzer kodları tekrardan yazmak zorunda kalırız. Bu şekilde kod tekrarı artar, en ufak bir geliştirmede tüm component'lerde geliştirmek zorunda kalacağız. Servisler bu konuya güzel bir çözümdür. Servisi tanımlıyoruz ve istediğimiz component içerisinde sadece bunu çağırabiliyoruz ve kodu daha merkezi haline getiriyoruz. @Injectable decaratoru ile sınıfın servis olduğunu belirtiriz. Bir sınıfı oluşturmak için ng g s servis-ismi / ng generate service servis-ismi komutunu kullanabiliriz."
+          class="m-b-10"
+        ></Label>
+        </StackLayout>
+      </Card:CardView>
+    </GridLayout>
+  </ScrollView>

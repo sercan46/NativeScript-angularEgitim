@@ -1,0 +1,168 @@
+<ActionBar style="background-color: #252525;">
+    <NavigationButton
+    text="Geri"
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()"
+  >
+  </NavigationButton>
+    <Label text="NativeScript"></Label>
+  </ActionBar>
+
+  <StackLayout>
+    <Image src="~/assets/nativescript.png"></Image>
+  </StackLayout>
+
+  <ScrollView>
+    <GridLayout columns="*" rows="*" style="margin-top: 180vh;">
+      <Card:CardView stretch="none" row="0" col="0" class="cardStyle">
+        <StackLayout class="cardContent" shadow="5" height="100%">
+          <Image src="~/assets/nativescriptbanner.png"></Image>
+
+          <Label
+            style="font-weight: bold;"
+            text="NgRx Nedir ?"
+            class="m-b-10"
+          ></Label>
+          <Label
+            text="NativeScript, Telerik adlı yazılım şirketinin mobil uygulama geliştirme framework’u olarak 2014‘te tanıtıldı.
+
+      JavaScript‘in son yıllarda ki inanılmaz yükselişi, backend tarafında Node.js, frontend tarafında ise React, Angular, Vue gibi framework’ları yazılım dünyasına kazandırmış oldu.
+
+      Bu framework’ler kendi içlerinde de gelişmeye devam ettiler ve yüz binlerce library ortaya çıktı. Open source üretimlerin ne kadar önemli olduğu buradan anlaşılabilir.
+
+      Yıllarca open source işlerden kaçınan Microsoft bile, geliştirmiş olduğu editör Visual Studio Code ve backend dünyasına kazandırdığı .NET Core Framework ile open source dünyasına önemli bir adım atmış oldu.
+
+      NativeScript‘in üretici Telerik‘in de Microsoft‘un platformu .NET üzerine çeşitli library’ler geliştirdiğini belirtmekte fayda var. Örneğin ( Kendo UI )
+
+      JavaScript‘in yükselişi sadece web tarafında geçerli olmadı. Bunda masaüstü ve mobil uygulama geliştirme alanları da etkilendi.
+
+      Masaüstü geliştirme de Electron.js kendisini büyük kitlelere tanıtmayı başardı.
+
+      Mobil dünyasında Cordova, Html+Css+JavaScript üçlüsüyle mobil uygulama geliştirebileceğini bize göstermiş oldu.
+
+      Bununla beraber Angular, React, Vue, Ionic‘de mobil uygulama geliştirmek için uygun hale geldi.
+
+      NativeScript ise, bize saf JavaScript ve XML ile mobil uygulama geliştirmemize olanak sağlıyor.
+
+      JavaScript’i çoğunlukla TypeScript kullanarak oluşturuyoruz. Ancak TypeScript bilmiyorsanız da JavaScript ile geliştirmeye devam edebilirsiniz.
+
+      Official olarak Angular ve Vue’ye destek veriyor. Ancak React’da son zamanlarda community olarak NativeScript’e eklendi. Kısa süre içerisinde de React’e official destek verileceğinavaScripti düşünüyorum. ( Verilmese dahi React’in mobil uygulama geliştirme framework’u React Native ile ilgilenebilirsiniz. )
+
+      NativeScript’i Windows, Linux ve Mac’de kullanabilirsiniz.
+
+      Terminal’de kısaltması “tns” şeklindedir.
+
+      t: Telerik
+
+      ns: NativeScript
+
+      anlamlarına gelmektedir.
+
+      Örnek komut;
+
+      tns debug android
+
+      NativeScript ile tek kodla, hem Android hem de iOS için uygulamalar yapabilirsiniz.
+
+      Dilerseniz Android için farklı iOS için farklı bir kodu da aynı satırlar içerisinde işleyebilirsiniz.
+
+      Örnek kod;
+
+      <GridLayout android:marginTop=”20″ ios:marginTop=”50″></GridLayout>
+
+      Bu XML koduyla, Android cihazlar marginTop değerini 20, iOS cihazlar için 50 olarak belirledik. Gördüğünüz gibi oldukça kolay ve anlaşılır 🙂
+
+      Peki neden Android yazarken Java, iOS yazarken Swift ya da Objective C kullanmayayım?
+
+      Dilerseniz kullanılabilir tabiki. Ancak size dezavantajlarından bahsedeyim.
+
+      1- Android yazarken Java, iOS yazarken Swift yada Objective C kullanmanız gerekir. Yani iki platform için de ayrı ayrı projeler oluşturmalı ve iki ( duruma göre üç ) farklı programlama diline hakim olmalısınız.
+
+      2- Görüntü olarak güzel bir şey çıkartmak istediğinizde, native dillerle çokça uğraşmanız gerekecek. Bir noktada sizi boğabilir.
+
+      3- JavaScript yazmayı seviyorsanız, bu backend dilleriyle uğraşmak istemeyebilirsiniz.
+
+      4- JavaScript ile aynı işi çok daha hızlı bitirebilir, sorunlarınıza çok daha hızlı çözüm bulabilirsiniz.
+
+      Peki neden Cordova, Ionic kullanmayayım da NativeScript kullanayım?
+
+      1- Cordova tabanlı framework’lere genel olarak Hybrid Frameworks diyoruz. Cordova oluşturduğunuz uygulama içerisinde WebView olarak gözükmektedir. Cihazın bazı native özelliklerine erişebilirsiniz. Ancak bazı noktalarda çözüm bulamayabilirsiniz.
+
+      2- Uygulama WebView üzerinde gösterildiği için, performans sorunlarıyla sıkça karşılaşabilirsiniz. Özelliklerde eski akıllı telefonlarda, uygulamanız kullanıcıya oldukça yavaş bir şekilde gözüküyor olabilir.
+
+      3- Örneğin Ionic ile geliştirme yapıyorsanız ve muhtemelen de Angular kullanıyorsanız, birbirine çok benzer kodları NativeScript’te yazabilir ve adından da anlaşılacağı üzere native olan bir framework’da uygulama üretebilirsiniz."
+            textWrap="true"
+            class="m-b-10"
+          ></Label>
+
+          <Label
+          style="font-weight: bold;"
+          text="Redux Pattern"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label textWrap="true" text="Native kodları JavaScript içerisinde kullanabilirsiniz." class="m-b-10"></Label>
+
+        <Label
+        text="Örneğin Base64 şifreleme yapmak için NativeScript’te Java kodlarını kullanabilirim."
+        textWrap="true"
+        class="m-b-10"
+      ></Label>
+          <Label style="font-weight: bold;" textWrap="true" text="Android:" class="m-b-10"></Label>
+          <Label
+          text="const text = new java.lang.String(“NativeScript Blog”);
+          const data = text.getBytes(“UTF-8”);
+          const base64 = android.util.Base64.encodeToString(data, android.util.Base64.DEFAULT);
+          console.log('result', base64);"
+          textWrap="true"
+          class="m-b-10"
+        ></Label>
+        <Label style="font-weight: bold;" textWrap="true" text="iOS:" class="m-b-10"></Label>
+        <Label
+        text="const text = NSString.stringWithString(“NativeScript Blog”);
+        const data = text.dataUsingEncoding(NSUTF8StringEncoding);
+        const base64 = data.base64EncodedStringWithOptions(0);
+        console.log('result', base64);"
+        textWrap="true"
+        class="m-b-10"
+      ></Label>
+      <Label
+      text="Bu kodları kullandığımda sanki yerel bir dilde uygulama geliştiriyormuş gibi gerçek sonuçları alabileceğim."
+      textWrap="true"
+      class="m-b-10"
+    ></Label>
+    <Label
+    text="Terminal’den;
+
+    tns preview
+
+    komutunu yürüttüğünüzde, ister Android ister iOS cihazınızdan uygulamanızı görüntüleyebilirsiniz. Böylelikle canlı test yapma imkanına da sahip olursunuz.
+
+    Tek yapmanız gereken projenin root klasöründe terminale ilgili komutu yazıp çalıştırmak ve mobil cihazınıza “NativeScript Playground“, “NativeScript Preview” uygulamalarını kurmak.
+
+    Sonrasında başlasın geliştirmeler 🙂
+
+    Android için AAB özelliği
+
+    Android App Bundle sayesinde, APK dosyası yerine AAB dosyasını Play Store’a yükleyebiliyorsunuz. Bu en özet anlatımla, cihazlara göre indirme boyutu sağlıyor. Örneğin APK dosyanız 20 MB ise, AAB dosyanız 7-8 MB’lara kadar düşüyor. Google kendi algoritmasıyla gerekli temizlemeleri ve performans iyileştirmelerini yapıyor, gereksiz kodları ortadan kaldırıyor ve daha optimize edilmiş halini kullanıcılara sunuyor.
+
+    Eğer NativeScript ilginizi çektiyse onu bilgisayarınıza kurmakla başlayabiliriz.
+
+    npm install -g nativescript
+
+    tns create first-app
+
+    cd first-app
+
+    tns preview
+
+    ardından ekranda beliren karekodu, cihazınızda bulunan “NativeScript Playground” uygulamasına okutun. Sonrasında kodunuzda bir kelimeyi, cümleyi değiştirip CTRL + S tuşlarına basın.
+
+    Uygulama cihazınızda otomatik olarak güncellenecektir 🙂"
+    textWrap="true"
+    class="m-b-10"
+  ></Label>
+      </StackLayout>
+      </Card:CardView>
+    </GridLayout>
+  </ScrollView>

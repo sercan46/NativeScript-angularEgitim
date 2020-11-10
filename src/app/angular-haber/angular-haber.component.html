@@ -1,0 +1,57 @@
+<ActionBar style="background-color: #219e52;">
+    <NavigationButton
+      ios:visibility="collapsed"
+      icon="res://menu"
+      (tap)="onDrawerButtonTap()"
+    ></NavigationButton>
+
+    <ActionItem
+      icon="res://menu"
+      android:visibility="collapsed"
+      (tap)="onDrawerButtonTap()"
+      ios.position="left"
+    >
+    </ActionItem>
+    <Label text="Angular"></Label>
+  </ActionBar>
+  <StackLayout>
+          <Image src="~/assets/haber.jpg"></Image>
+
+  </StackLayout>
+
+
+
+  <ScrollView>
+
+    <GridLayout columns="*, *" rows="200,200" style="margin-top:150vh">
+
+        <Card:CardView  stretch="none" row="0" col="0" class="cardStyle" >
+             <StackLayout class="cardContent" shadow="5">
+                <Image width="100%" height="65%"   src="~/assets/version9.png" ></Image>
+                <Label text="Angular Versiyon 9.1" class="m-b-10"></Label>
+             </StackLayout>
+        </Card:CardView>
+
+    <Card:CardView  stretch="none" row="0" col="1" class="cardStyle">
+        <StackLayout class="cardContent" shadow="5" >
+           <Image width="100%" height="65%"  src="~/assets/version.png" ></Image>
+           <Label text="Angular Versiyon 9.0" class="m-b-10"></Label>
+        </StackLayout>
+    </Card:CardView>
+
+    <Card:CardView  stretch="none" row="1" col="0" class="cardStyle" >
+        <StackLayout class="cardContent" shadow="5">
+           <Image width="100%" height="65%"   src="~/assets/angularekibi.png" ></Image>
+           <Label text="Angular Ekibi" class="m-b-10"></Label>
+        </StackLayout>
+   </Card:CardView>
+
+<Card:CardView  stretch="none" row="1" col="1" class="cardStyle">
+   <StackLayout class="cardContent" shadow="5" >
+      <Image width="100%" height="65%"  src="~/assets/iyilik.png" ></Image>
+      <Label text="İyilik İçin Hack" class="m-b-10"></Label>
+   </StackLayout>
+</Card:CardView>
+
+      </GridLayout>
+    </ScrollView>
